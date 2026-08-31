@@ -338,6 +338,27 @@ site-footer:not(:defined) {
   margin-inline: auto;
 }
 
+.section-heading--single {
+  display: block;
+  max-width: 900px;
+}
+
+.section-heading--single h2 {
+  margin-bottom: 24px;
+}
+
+.section-heading--single p {
+  max-width: 78ch;
+  margin-bottom: 14px;
+}
+
+.section-question {
+  margin-bottom: 14px !important;
+  color: var(--blue) !important;
+  font-size: 0.86rem;
+  font-weight: 740;
+}
+
 .lede {
   max-width: 68ch;
   color: var(--muted);
@@ -436,7 +457,7 @@ site-footer:not(:defined) {
 .utility-bar {
   color: rgba(255, 255, 255, 0.83);
   background: var(--navy-deep);
-  font-size: 0.76rem;
+  font-size: 0.82rem;
 }
 
 .utility-bar__inner {
@@ -538,7 +559,7 @@ site-footer:not(:defined) {
   position: relative;
   padding-block: 10px;
   color: #33465f;
-  font-size: 0.84rem;
+  font-size: 0.94rem;
   font-weight: 680;
   text-decoration: none;
 }
@@ -599,8 +620,9 @@ site-footer:not(:defined) {
 /* Hero */
 .hero {
   position: relative;
+  min-height: 680px;
   overflow: hidden;
-  padding-block: clamp(54px, 8vw, 105px) clamp(74px, 9vw, 120px);
+  padding-block: clamp(54px, 8vw, 92px);
   background:
     radial-gradient(circle at 4% 0%, rgba(61, 130, 193, 0.11), transparent 35%),
     var(--canvas);
@@ -630,8 +652,9 @@ site-footer:not(:defined) {
 }
 
 .hero h1 {
-  max-width: 830px;
-  margin-bottom: 24px;
+  max-width: 720px;
+  margin-bottom: 32px;
+  font-size: clamp(2.7rem, 5vw, 4.65rem);
 }
 
 .hero__lead {
@@ -697,7 +720,7 @@ site-footer:not(:defined) {
   height: 100%;
   min-height: 580px;
   object-fit: cover;
-  object-position: 51% 34%;
+  object-position: 50% 28%;
   transition: transform 1s var(--ease);
 }
 
@@ -1314,6 +1337,49 @@ site-footer:not(:defined) {
   font-family: var(--serif);
   font-size: clamp(1.3rem, 2.4vw, 1.8rem);
   line-height: 1.35;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.72fr) minmax(0, 1.18fr);
+  gap: clamp(38px, 7vw, 96px);
+  align-items: start;
+}
+
+.profile-card {
+  padding: clamp(28px, 4vw, 48px);
+  background: var(--sky);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+}
+
+.profile-card h2 {
+  margin-bottom: 20px;
+  font-size: clamp(2.15rem, 4vw, 3.6rem);
+}
+
+.profile-card .credential-list {
+  margin-bottom: 0;
+}
+
+.profile-copy {
+  max-width: 760px;
+}
+
+.profile-copy p {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.78;
+}
+
+.profile-copy > p:first-child {
+  color: var(--ink);
+  font-size: clamp(1.05rem, 1.55vw, 1.2rem);
+}
+
+.profile-copy h3 {
+  margin: 36px 0 14px;
+  font-size: clamp(1.55rem, 2.6vw, 2.15rem);
 }
 
 /* Programs */
@@ -1977,6 +2043,44 @@ site-footer:not(:defined) {
   text-transform: uppercase;
 }
 
+.nursing-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 28px;
+  margin-bottom: 0;
+}
+
+.treatment-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 34px;
+}
+
+.treatment-grid section {
+  padding-block: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.treatment-grid h4 {
+  margin-top: 0;
+}
+
+.treatment-grid p:last-child {
+  margin-bottom: 0;
+}
+
+#lpg .story-layout {
+  grid-template-columns: minmax(0, 1fr) minmax(380px, 0.9fr);
+  align-items: start;
+}
+
+.care-note {
+  padding: 14px 16px;
+  background: var(--sky);
+  border-left: 2px solid var(--gold);
+  font-size: 0.88rem;
+}
+
 .check-list {
   display: grid;
   gap: 10px;
@@ -2304,10 +2408,15 @@ site-footer:not(:defined) {
   .story-layout,
   .editorial-split,
   .editorial-split--reverse,
+  .profile-grid,
   .pricing-summary,
   .faq-layout,
   .contact-panel__grid,
   .page-hero__grid {
+    grid-template-columns: 1fr;
+  }
+
+  #lpg .story-layout {
     grid-template-columns: 1fr;
   }
 
@@ -2322,7 +2431,7 @@ site-footer:not(:defined) {
 
   .hero__image-wrap,
   .hero__image-wrap img {
-    min-height: 620px;
+    min-height: 540px;
   }
 
   .trust-rail__inner {
@@ -2437,7 +2546,7 @@ site-footer:not(:defined) {
   }
 
   .hero {
-    padding-block: 45px 74px;
+    padding-block: 45px 0;
   }
 
   .hero__grid {
@@ -2445,7 +2554,7 @@ site-footer:not(:defined) {
   }
 
   .hero h1 {
-    font-size: clamp(2.55rem, 13vw, 4.1rem);
+    font-size: clamp(2.3rem, 10vw, 3.35rem);
   }
 
   .hero__lead {
@@ -2487,6 +2596,10 @@ site-footer:not(:defined) {
   .footer-grid,
   .info-band {
     grid-template-columns: 1fr;
+  }
+
+  .profile-card {
+    padding: 28px 24px;
   }
 
   .trust-item:nth-child(even) {
@@ -2622,6 +2735,11 @@ site-footer:not(:defined) {
   }
 
   .detail-card {
+    grid-template-columns: 1fr;
+  }
+
+  .nursing-list,
+  .treatment-grid {
     grid-template-columns: 1fr;
   }
 

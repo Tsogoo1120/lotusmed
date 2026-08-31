@@ -4,12 +4,7 @@ import { dirname, extname, isAbsolute, join, relative, resolve } from "node:path
 const root = resolve(process.cwd());
 const htmlFiles = [
   "index.html",
-  "soins-infirmiers.html",
-  "soins.html",
-  "lpg.html",
   "tarifs.html",
-  "a-propos.html",
-  "contact.html",
   "mentions-legales.html",
   "politique-confidentialite.html"
 ];

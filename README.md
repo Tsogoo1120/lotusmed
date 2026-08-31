@@ -1,6 +1,6 @@
 # Site LOTUS MED Genève
 
-Site statique multipage, responsive et sans dépendance externe. Les photos et la vidéo d’introduction sont servies localement.
+Site statique condensé et responsive, sans dépendance externe. Le contenu principal et le contact sont réunis sur l’accueil, tandis que les tarifs et les pages juridiques restent séparés. Les photos et la vidéo d’introduction sont servies localement.
 
 ## Prévisualiser
 

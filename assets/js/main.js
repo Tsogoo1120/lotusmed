@@ -42,18 +42,17 @@ class SiteHeader extends HTMLElement {
     const page = document.body.dataset.page || "home";
     const links = [
       ["home", "index.html", "Accueil"],
-      ["infirmiers", "soins-infirmiers.html", "Soins infirmiers"],
-      ["soins", "soins.html", "Nos soins"],
-      ["lpg", "lpg.html", "LPG"],
+      ["prestations", "index.html#prestations", "Prestations"],
+      ["lpg", "index.html#lpg", "LPG"],
       ["tarifs", "tarifs.html", "Tarifs"],
-      ["about", "a-propos.html", "À propos"]
+      ["contact", "index.html#contact", "Contact"]
     ];
     this.innerHTML = `
       <div class="utility-bar">
         <div class="container utility-bar__inner">
           <div class="utility-bar__group">
-            <span>Cabinet à Genève</span>
-            <span>Infirmière &amp; lymphothérapeute diplômée</span>
+            <span>Cabinet thérapeutique</span>
+            <span>Infirmière en soins généraux</span>
           </div>
           <div class="utility-bar__group">
             <a href="tel:+41794696250">079 469 62 50</a>
@@ -67,9 +66,9 @@ class SiteHeader extends HTMLElement {
           <nav class="main-nav" aria-label="Navigation principale">
             <div class="main-nav__links" id="main-navigation" data-menu>
               ${links.map(([key, href, label]) => `<a class="main-nav__link" href="${href}"${page === key ? ' aria-current="page"' : ""}>${label}</a>`).join("")}
-              <a class="button button--primary main-nav__mobile-cta" href="contact.html#formulaire">Demander un rendez-vous</a>
+              <a class="button button--primary main-nav__mobile-cta" href="tel:+41794696250">Rendez-vous par téléphone</a>
             </div>
-            <a class="button button--primary" href="contact.html#formulaire">Demander un rendez-vous</a>
+            <a class="button button--primary" href="tel:+41794696250">Rendez-vous par téléphone</a>
             <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" aria-label="Ouvrir le menu" data-menu-toggle><span></span></button>
           </nav>
         </div>
@@ -85,21 +84,22 @@ class SiteFooter extends HTMLElement {
           <div class="footer-grid">
             <div class="footer-about">
               ${brand()}
-              <p>Soins infirmiers à domicile, lymphothérapie, massages thérapeutiques et LPG Endermologie® Cellu M6 Alliance à Genève.</p>
+              <p>Cabinet thérapeutique à Genève.</p>
             </div>
             <div class="footer-column">
               <h2>Explorer</h2>
               <ul class="footer-links">
-                <li><a href="a-propos.html">À propos</a></li>
-                <li><a href="soins.html">Nos soins</a></li>
-                <li><a href="lpg.html">Programmes LPG</a></li>
+                <li><a href="index.html#a-propos">À propos</a></li>
+                <li><a href="index.html#soins-infirmiers">Soins infirmiers</a></li>
+                <li><a href="index.html#soins">Nos soins</a></li>
+                <li><a href="index.html#lpg">LPG</a></li>
                 <li><a href="tarifs.html">Tarifs</a></li>
               </ul>
             </div>
             <div class="footer-column">
               <h2>Informations</h2>
               <ul class="footer-links">
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
                 <li><a href="mentions-legales.html">Mentions légales</a></li>
                 <li><a href="politique-confidentialite.html">Confidentialité</a></li>
               </ul>
@@ -115,13 +115,12 @@ class SiteFooter extends HTMLElement {
           </div>
           <div class="footer-bottom">
             <span>© <span data-current-year></span> LOTUS MED. Tous droits réservés.</span>
-            <span>Prendre soin de vous, naturellement.</span>
           </div>
         </div>
       </footer>
       <nav class="mobile-actions" aria-label="Actions rapides">
         <a class="button button--secondary" href="tel:+41794696250">${icon("phone")} Appeler</a>
-        <a class="button button--primary" href="contact.html#formulaire">Demander</a>
+        <a class="button button--primary" href="index.html#formulaire">Écrire</a>
       </nav>`;
   }
 }
