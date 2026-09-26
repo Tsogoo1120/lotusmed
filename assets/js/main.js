@@ -42,8 +42,8 @@ class SiteHeader extends HTMLElement {
     const page = document.body.dataset.page || "home";
     const links = [
       ["home", "index.html", "Accueil"],
-      ["prestations", "index.html#prestations", "Prestations"],
-      ["lpg", "index.html#lpg", "LPG"],
+      ["prestations", "prestations.html", "Prestations"],
+      ["lpg", "lpg.html", "LPG"],
       ["tarifs", "tarifs.html", "Tarifs"],
       ["contact", "index.html#contact", "Contact"]
     ];
@@ -84,34 +84,11 @@ class SiteFooter extends HTMLElement {
           <div class="footer-grid">
             <div class="footer-about">
               ${brand()}
-              <p>Cabinet thérapeutique à Genève.</p>
-            </div>
-            <div class="footer-column">
-              <h2>Explorer</h2>
-              <ul class="footer-links">
-                <li><a href="index.html#a-propos">À propos</a></li>
-                <li><a href="index.html#soins-infirmiers">Soins infirmiers</a></li>
-                <li><a href="index.html#soins">Nos soins</a></li>
-                <li><a href="index.html#lpg">LPG</a></li>
-                <li><a href="tarifs.html">Tarifs</a></li>
-              </ul>
-            </div>
-            <div class="footer-column">
-              <h2>Informations</h2>
-              <ul class="footer-links">
-                <li><a href="index.html#contact">Contact</a></li>
-                <li><a href="mentions-legales.html">Mentions légales</a></li>
-                <li><a href="politique-confidentialite.html">Confidentialité</a></li>
-              </ul>
             </div>
             <div class="footer-column footer-contact">
-              <h2>Lotus Med Genève</h2>
-              <p>Rue Moillebeau 42<br>1202 Genève</p>
-              <p><a href="tel:+41794696250">079 469 62 50</a><br><a href="mailto:rosseletnara@yahoo.com">rosseletnara@yahoo.com</a></p>
+              <a href="tel:+41794696250">079 469 62 50</a>
+              <a href="https://www.google.com/maps/search/?api=1&amp;query=Rue+Moillebeau+42+1202+Gen%C3%A8ve" target="_blank" rel="noopener noreferrer">Rue Moillebeau<br>42, 1202 Genève — voir sur la carte</a>
             </div>
-          </div>
-          <div class="footer-disclaimer">
-            Les informations présentées sur ce site sont fournies à titre informatif et ne remplacent pas un diagnostic, une consultation ou un avis médical. Les indications et le protocole de chaque soin sont définis après une évaluation personnalisée. En cas de doute, demandez conseil à votre médecin. En cas d’urgence médicale, contactez le <strong>144</strong>.
           </div>
           <div class="footer-bottom">
             <span>© <span data-current-year></span> LOTUS MED. Tous droits réservés.</span>
