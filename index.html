@@ -11,9 +11,9 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/images/narangarav-rosselet.png">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23082b58'/%3E%3Cpath d='M32 48C18 36 20 18 32 6c12 12 14 30 0 42ZM28 48C14 45 7 34 10 21c13 5 20 15 18 27Zm8 0c14-3 21-14 18-27-13 5-20 15-18 27Z' fill='white'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="assets/css/styles.css?v=20260926-home-care">
+  <link rel="stylesheet" href="assets/css/styles.css?v=20260927-footer-contact">
   <script>document.documentElement.classList.add('js')</script>
-  <script src="assets/js/main.js?v=20260926-footer-location" defer></script>
+  <script src="assets/js/main.js?v=20260927-footer-contact" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -44,10 +44,18 @@
   </header>
 
   <main id="contenu">
-    <section class="hero hero--compact" id="accueil" aria-labelledby="hero-title">
+    <section class="hero hero--compact" id="accueil" aria-labelledby="about-title">
       <div class="container hero__grid">
         <div class="hero__content reveal is-visible">
-          <h1 id="hero-title">Des soins qui vous considèrent dans votre globalité.</h1>
+          <div class="profile-card reveal is-visible">
+            <span class="eyebrow">Votre thérapeute</span>
+            <h2 id="about-title">Narangarav ROSSELET</h2>
+            <ul class="credential-list">
+              <li>Infirmière diplômée en soins généraux</li>
+              <li>Lymphothérapeute diplômée (Méthode Vodder)</li>
+              <li>Agréée ASCA et RME</li>
+            </ul>
+          </div>
           <div class="button-row">
             <a class="button button--primary" href="tel:+41794696250">
               Demander un rendez-vous par téléphone
@@ -65,17 +73,8 @@
       </div>
     </section>
 
-    <section class="section section--white" id="a-propos" aria-labelledby="about-title">
-      <div class="container profile-grid">
-        <div class="profile-card reveal">
-          <span class="eyebrow">Votre thérapeute</span>
-          <h2 id="about-title">Narangarav ROSSELET</h2>
-          <ul class="credential-list">
-            <li>Infirmière diplômée en soins généraux</li>
-            <li>Lymphothérapeute diplômée (Méthode Vodder)</li>
-            <li>Agréée ASCA et RME</li>
-          </ul>
-        </div>
+    <section class="section section--white" id="a-propos" aria-label="À propos">
+      <div class="container profile-grid profile-grid--copy-only">
         <div class="profile-copy reveal reveal-delay-1">
           <p>Grâce à mon expérience en soins infirmiers, thérapies manuelles et LPG Endermologie® Cellu M6 Alliance, je propose une prise en charge globale, fondée sur des connaissances médicales, des techniques reconnues et une approche centrée sur les besoins de chaque patient.</p>
           <p>Chaque prise en charge débute par une évaluation personnalisée afin de définir un traitement adapté aux besoins, à l’état de santé et aux objectifs de chaque patient. Les soins sont réalisés dans le respect des bonnes pratiques, avec une approche globale visant à préserver la santé, favoriser la récupération et améliorer durablement la qualité de vie.</p>
@@ -85,26 +84,25 @@
       </div>
     </section>
 
-    <section class="section home-care" id="prestations" aria-labelledby="services-title">
+    <section class="section home-care" id="prestations" aria-label="Nos prestations">
       <div class="container">
         <div class="home-care__heading">
-          <div><span class="eyebrow">Nos prestations · ASCA &amp; RME</span><h2 id="services-title">Le soin juste.<br><em>Pour vous.</em></h2></div>
-          <div><p class="lede">Des gestes attentifs, une écoute réelle et des soins adaptés à votre rythme. Découvrez nos thérapies manuelles.</p><a class="text-link" href="prestations.html">Toutes nos prestations <span aria-hidden="true">↗</span></a></div>
+          <div><span class="eyebrow">Nos prestations · ASCA &amp; RME</span><p class="lede">Des gestes attentifs, une écoute réelle et des soins adaptés à votre rythme. Découvrez nos thérapies manuelles.</p></div>
         </div>
         <div class="home-care__grid">
           <a class="care-tile" href="prestations.html#drainage"><span class="care-tile__top"><span>01 / Circulation</span><span aria-hidden="true">↗</span></span><h3>Drainage<br>lymphatique</h3><p>La douceur de la méthode Vodder, au service de votre confort.</p><span class="care-tile__foot">Méthode Vodder</span></a>
           <a class="care-tile" href="prestations.html#massages"><span class="care-tile__top"><span>02 / Détente</span><span aria-hidden="true">↗</span></span><h3>Massage<br>classique</h3><p>Un moment pour relâcher les tensions et retrouver de la légèreté.</p><span class="care-tile__foot">Équilibre &amp; bien-être</span></a>
           <a class="care-tile" href="prestations.html#massage-mongol"><span class="care-tile__top"><span>03 / Tradition</span><span aria-hidden="true">↗</span></span><h3>Massage<br>mongol</h3><p>Des gestes inspirés des traditions mongoles pour une détente profonde.</p><span class="care-tile__foot">Savoir-faire ancestral</span></a>
           <a class="care-tile" href="prestations.html#visage"><span class="care-tile__top"><span>04 / Visage</span><span aria-hidden="true">↗</span></span><h3>Rituel facial<br>Gua Sha</h3><p>Un soin manuel à la pierre naturelle, dédié à la détente du visage.</p><span class="care-tile__foot">Douceur &amp; éclat</span></a>
+          <a class="care-tile" href="prestations.html#soins-infirmiers"><span class="care-tile__top"><span>05 / À domicile</span><span aria-hidden="true">↗</span></span><h3>Soins infirmiers<br>à domicile</h3><p>Soins infirmiers
+Assurance de base (LAMAl), sur prescription médicale.</p><span class="care-tile__foot">Prise en charge LAMAl</span></a>
         </div>
-        <div class="home-care__nursing"><div><span class="eyebrow">Aussi à vos côtés, chez vous</span><h3>Soins infirmiers à domicile</h3></div><a class="text-link" href="prestations.html#soins-infirmiers">Découvrir les soins <span aria-hidden="true">↗</span></a></div>
-        <aside class="home-coverage" aria-labelledby="coverage-title"><h3 id="coverage-title">Remboursement<br>des soins</h3><p><strong>Soins infirmiers</strong>Assurance de base (LAMal), sur prescription médicale.</p><p><strong>Drainage lymphatique</strong>Assurance complémentaire, selon les conditions de votre contrat.</p></aside>
       </div>
     </section>
     <section class="section home-lpg" id="lpg" aria-labelledby="lpg-title">
       <div class="container">
         <div class="home-lpg__panel">
-          <div class="home-lpg__copy"><span class="eyebrow">LPG Endermologie® · Cellu M6 Alliance</span><h2 id="lpg-title">Votre corps.<br>Votre visage.<br><em>Votre bien-être.</em></h2><p>La précision d’une technologie non invasive, associée à une prise en charge attentive. Chaque protocole commence par un bilan personnalisé.</p><a class="button button--light" href="lpg.html">Découvrir le LPG <span aria-hidden="true">↗</span></a></div>
+          <div class="home-lpg__copy"><span class="eyebrow">Votre corps et votre visage Votre bien - être</span><h2 id="lpg-title">LPG Endermologie®<br>Cellu M6 Alliance<br><em></em></h2><p>La précision d’une technologie non invasive, associée à une prise en charge attentive. Chaque protocole commence par un bilan personnalisé.</p><a class="button button--light" href="lpg.html">Découvrir le LPG <span aria-hidden="true">↗</span></a></div>
           <div class="home-lpg__treatments">
             <span class="home-lpg__label">Deux approches, une même attention</span>
             <a class="lpg-treatment" href="lpg.html#indications-title"><span class="lpg-treatment__symbol" aria-hidden="true">◎</span><div><h3>Le corps</h3><p>Circulation, confort des tissus et qualité de la peau.</p><span>Une séance de 60 minutes</span></div><span aria-hidden="true">↗</span></a>
@@ -121,7 +119,6 @@
           <div class="contact-panel__grid">
             <div class="reveal">
               <span class="eyebrow">Nous contacter</span>
-              <h2 id="contact-title">Parlez-nous de vos besoins.</h2>
               <p>Posez votre question ou demandez un rendez-vous. Nous vous recontacterons dans les meilleurs délais afin de vous renseigner et de convenir de la suite.</p>
               <div class="contact-details">
                 <div class="contact-detail">
@@ -130,18 +127,17 @@
                 </div>
                 <div class="contact-detail">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.8 5.6a2 2 0 0 1-2.4 0L2 7"></path></svg>
-                  <span><strong>E-mail</strong><a href="mailto:rosseletnara@yahoo.com">rosseletnara@yahoo.com</a></span>
+                  <span><strong></strong><a href="mailto:rosseletnara@yahoo.com">rosseletnara@yahoo.com</a></span>
                 </div>
                 <div class="contact-detail">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
-                  <span><strong>Cabinet</strong><a href="https://www.google.com/maps/search/?api=1&amp;query=Rue+Moillebeau+42+1202+Gen%C3%A8ve" target="_blank" rel="noopener noreferrer">Rue Moillebeau<br>42, 1202 Genève — voir sur la carte<span aria-hidden="true"> ↗</span></a></span>
+                  <span><strong></strong><a href="https://www.google.com/maps/search/?api=1&amp;query=Rue+Moillebeau+42+1202+Gen%C3%A8ve" target="_blank" rel="noopener noreferrer">Rue Moillebeau 42<br>1209 Genève — voir sur la carte<span aria-hidden="true"> </span></a></span>
                 </div>
               </div>
             </div>
 
             <form class="contact-form reveal reveal-delay-1" id="formulaire" action="mailto:rosseletnara@yahoo.com" method="post" enctype="text/plain" aria-labelledby="contact-form-title" data-contact-form>
               <h3 id="contact-form-title">Demander un rendez-vous</h3>
-              <p class="contact-form__intro" id="form-help">Tous les champs sont obligatoires. À l’envoi, votre messagerie s’ouvrira avec votre demande préremplie.</p>
               <div class="form-grid">
                 <div class="form-field">
                   <label for="contact-nom">Nom et prénom *</label>

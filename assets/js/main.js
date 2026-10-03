@@ -86,8 +86,8 @@ class SiteFooter extends HTMLElement {
               ${brand()}
             </div>
             <div class="footer-column footer-contact">
-              <a href="tel:+41794696250">079 469 62 50</a>
-              <a href="https://www.google.com/maps/search/?api=1&amp;query=Rue+Moillebeau+42+1202+Gen%C3%A8ve" target="_blank" rel="noopener noreferrer">Rue Moillebeau<br>42, 1202 Genève — voir sur la carte</a>
+              <a class="footer-contact__phone" href="tel:+41794696250">${icon("phone")}<span>079 469 62 50</span></a>
+              <a href="https://www.google.com/maps/search/?api=1&amp;query=Rue+Moillebeau+42+1209+Gen%C3%A8ve" target="_blank" rel="noopener noreferrer">Rue Moillebeau 42<br>1209 Genève — voir sur la carte</a>
             </div>
           </div>
           <div class="footer-bottom">

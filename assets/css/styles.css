@@ -628,6 +628,19 @@ site-footer:not(:defined) {
     var(--canvas);
 }
 
+#accueil.hero--compact {
+  min-height: 0;
+  padding-block: clamp(30px, 4vw, 56px);
+}
+
+#accueil .hero__grid {
+  gap: clamp(24px, 4vw, 56px);
+}
+
+#accueil .hero__content .button-row {
+  margin-top: 20px;
+}
+
 .hero::after {
   position: absolute;
   top: 8%;
@@ -1346,6 +1359,32 @@ site-footer:not(:defined) {
   align-items: start;
 }
 
+.profile-grid--copy-only {
+  display: block;
+}
+
+.profile-grid--copy-only .profile-copy {
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+#a-propos {
+  padding-block: clamp(40px, 5vw, 72px);
+}
+
+#a-propos .profile-copy p {
+  margin-bottom: 0.85em;
+  line-height: 1.65;
+}
+
+#a-propos .profile-copy h3 {
+  margin: 22px 0 10px;
+}
+
+#a-propos .profile-copy > :last-child {
+  margin-bottom: 0;
+}
+
 .profile-card {
   padding: clamp(28px, 4vw, 48px);
   background: var(--sky);
@@ -1360,6 +1399,23 @@ site-footer:not(:defined) {
 
 .profile-card .credential-list {
   margin-bottom: 0;
+}
+
+#accueil .profile-card {
+  padding: clamp(24px, 3vw, 36px);
+}
+
+#accueil .profile-card .eyebrow {
+  margin-bottom: 10px;
+}
+
+#accueil .profile-card h2 {
+  margin-bottom: 12px;
+}
+
+#accueil .profile-card .credential-list {
+  gap: 8px;
+  margin-top: 0;
 }
 
 .profile-copy {
@@ -2050,6 +2106,17 @@ site-footer:not(:defined) {
   margin-bottom: 0;
 }
 
+.nursing-list li {
+  padding-left: 20px;
+}
+
+.nursing-list li::before {
+  top: 0.65em;
+  width: 7px;
+  height: 7px;
+  content: "";
+}
+
 .treatment-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2072,6 +2139,49 @@ site-footer:not(:defined) {
 #lpg .story-layout {
   grid-template-columns: minmax(0, 1fr) minmax(380px, 0.9fr);
   align-items: start;
+}
+
+.story-layout--stacked {
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
+  gap: clamp(24px, 4vw, 48px);
+}
+
+#lpg .story-layout--stacked {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body[data-page="lpg"] .story-copy .credential-list li,
+#lpg .lpg-indications li {
+  padding-left: 20px;
+}
+
+body[data-page="lpg"] .story-copy .credential-list li::before,
+#lpg .lpg-indications li::before {
+  top: 0.65em;
+  width: 7px;
+  height: 7px;
+  content: "";
+  background: var(--blue);
+  border-radius: 50%;
+}
+
+.story-layout--stacked .story-player {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.story-layout--stacked .story-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.story-layout--stacked .story-copy {
+  width: min(100%, 800px);
 }
 
 .care-note {
@@ -2254,6 +2364,18 @@ site-footer:not(:defined) {
 
 .footer-contact a {
   color: white;
+}
+
+.footer-contact__phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.footer-contact__phone svg {
+  width: 16px;
+  height: 16px;
+  flex: none;
 }
 
 .footer-disclaimer {
@@ -2872,13 +2994,20 @@ site-footer:not(:defined) {
 .footer-contact h2 { margin-bottom: 8px; }
 .site-footer .footer-bottom { padding-top: 12px; }
 .lpg-indications { max-width: 850px; }
+.credential-list.lpg-indications li { padding-left: 20px; }
+.credential-list.lpg-indications li::before {
+  top: 0.65em;
+  width: 7px;
+  height: 7px;
+  content: "";
+  background: var(--blue);
+  border-radius: 50%;
+}
 
 /* Welcome page: therapies and LPG. */
 .home-care__heading { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: end; margin-bottom: 40px; }
-.home-care__heading h2 { margin-bottom: 0; }
-.home-care__heading em { color: var(--gold-dark); }
 .home-care__heading .lede { max-width: 480px; }
-.home-care__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.home-care__grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 18px; }
 .care-tile { display: flex; flex-direction: column; padding: 28px 24px; border: 1px solid var(--line); border-radius: 20px; background: var(--paper); text-decoration: none; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
 .care-tile:hover { transform: translateY(-5px); box-shadow: var(--shadow-sm); border-color: var(--gold); }
 .care-tile:first-child { background: var(--sky); }
@@ -2887,9 +3016,6 @@ site-footer:not(:defined) {
 .care-tile h3 { font-size: clamp(1.65rem, 2.2vw, 2rem); line-height: 1.15; margin-bottom: 18px; }
 .care-tile p { color: var(--muted); font-size: .92rem; line-height: 1.7; }
 .care-tile__foot { margin-top: auto; padding-top: 22px; border-top: 1px solid var(--line); color: var(--navy); font-size: .72rem; letter-spacing: .045em; }
-.home-care__nursing { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 30px 0; margin-top: 12px; }
-.home-care__nursing .eyebrow { margin-bottom: 8px; }
-.home-care__nursing h3 { margin-bottom: 0; font-size: 1.65rem; }
 .home-coverage { display: grid; grid-template-columns: .8fr 1fr 1.2fr; gap: 30px; padding: 26px 30px; border: 1px solid #e5dac5; border-radius: 16px; background: #f4eee3; }
 .home-coverage h3 { font-size: 1.35rem; line-height: 1.25; margin: 0; }
 .home-coverage p { margin: 0; color: var(--muted); font-size: .82rem; }
@@ -2909,14 +3035,14 @@ site-footer:not(:defined) {
 .lpg-treatment p { margin-bottom: 16px; font-size: .9rem; }
 .lpg-treatment div > span { color: #e4c38a; font-size: .75rem; }
 .home-lpg__note { margin: 22px 0 0; font-size: .8rem; color: #c6d6e8; }
-@media (max-width: 1000px) {
-  .home-care__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 1100px) {
+  .home-care__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .home-lpg__panel { gap: 30px; }
   .lpg-treatment { padding: 22px 18px; gap: 12px; }
 }
 @media (max-width: 700px) {
   .home-care__heading, .home-lpg__panel, .home-coverage { grid-template-columns: 1fr; gap: 24px; }
-  .home-care__nursing { align-items: flex-start; flex-direction: column; gap: 14px; }
+  .home-care__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .home-coverage { padding: 24px; }
   .home-lpg__panel { border-radius: 24px; gap: 38px; }
 }
