@@ -1973,6 +1973,42 @@ site-footer:not(:defined) {
   flex: 0 0 auto;
 }
 
+body[data-page="prestations"] .cta-strip {
+  min-height: clamp(460px, 40vw, 560px);
+  background: url("../images/cabinet-lotusmed-1200.webp") center 53% / cover no-repeat;
+}
+
+body[data-page="prestations"] .personalized-care {
+  margin-top: 40px;
+}
+
+body[data-page="prestations"] .personalized-care h2 {
+  max-width: 900px;
+  font-size: clamp(2.2rem, 4.4vw, 4.2rem);
+}
+
+body[data-page="prestations"] .personalized-care p {
+  max-width: 850px;
+  font-size: clamp(1.125rem, 1.7vw, 1.5rem);
+  line-height: 1.6;
+}
+
+body[data-page="lpg"] .cta-strip {
+  min-height: clamp(460px, 40vw, 560px);
+  color: #000;
+  background: url("../images/cabinet-lotusmed-1200.webp") center 53% / cover no-repeat;
+}
+
+body[data-page="lpg"] .cta-strip h2,
+body[data-page="lpg"] .cta-strip p,
+body[data-page="lpg"] .cta-strip .button {
+  color: #000;
+}
+
+body[data-page="lpg"] .cta-strip .button--ghost-light {
+  border-color: #000;
+}
+
 /* Inner pages */
 .page-hero {
   position: relative;
@@ -3057,6 +3093,10 @@ body[data-page="lpg"] .story-copy .credential-list li::before,
 .reimbursement-note { margin-top: 24px; padding: 20px 24px; border-left: 3px solid var(--gold); background: var(--white, #fff); }
 .reimbursement-note h3 { margin-bottom: 12px; }
 .reimbursement-note p { margin-bottom: 6px; }
+body[data-page="prestations"] .reimbursement-note p {
+  font-size: clamp(1.125rem, 1.5vw, 1.375rem);
+  line-height: 1.6;
+}
 @media (max-width: 640px) {
   .footer-grid { grid-template-columns: 1fr; gap: 16px; }
   .footer-contact { justify-self: start; }
